@@ -1,6 +1,6 @@
 module Datatrans
   class Config
-    ENVIRONMENTS = [:development, :production].freeze
+    ENVIRONMENTS = [:development, :production, :test].freeze
     DEFAULT_ENVIRONMENT = :development
 
     DEFAULT_SIGN_KEY = false
@@ -20,6 +20,12 @@ module Datatrans
         :xml_authorize_url  => "#{BASE_URL_PRODUCTION}/upp/jsp/XML_authorize.jsp".freeze,
         :xml_settlement_url => "#{BASE_URL_PRODUCTION}/upp/jsp/XML_processor.jsp".freeze,
         :xml_status_url     => "#{BASE_URL_PRODUCTION}/upp/jsp/XML_status.jsp".freeze,
+      },
+      :test => {
+        :web_authorize_url  => "#{BASE_URL_DEVELOPMENT}/upp/jsp/upStart.jsp".freeze,
+        :xml_authorize_url  => "#{BASE_URL_DEVELOPMENT}/upp/jsp/XML_authorize.jsp".freeze,
+        :xml_settlement_url => "#{BASE_URL_DEVELOPMENT}/upp/jsp/XML_processor.jsp".freeze,
+        :xml_status_url     => "#{BASE_URL_DEVELOPMENT}/upp/jsp/XML_status.jsp".freeze,
       }.freeze
     }.freeze
 

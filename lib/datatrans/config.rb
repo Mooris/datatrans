@@ -1,6 +1,6 @@
 module Datatrans
   class Config
-    ENVIRONMENTS = [:development, :production, :test].freeze
+    ENVIRONMENTS = [:development, :production, :test, :integration].freeze
     DEFAULT_ENVIRONMENT = :development
 
     DEFAULT_SIGN_KEY = false
